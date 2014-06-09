@@ -1,1 +1,2 @@
-Parametrized test with JUnitParams: ./junitparams-demo
+Parametrized tests with JUnitParams: ./junitparams-demo
+Logging testing: ./logging-test
