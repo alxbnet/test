@@ -16,7 +16,10 @@ import static net.alxb.logging.Speedometer.SPEED_LIMIT_KPH;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
- * Test for {@code Speedometer} class
+ * Tests {@code Speedometer} class logging.
+ * <br>Logger is configured to write to stdout.
+ * Stdout is reassigned with output stream.
+ * Log messages are read from the reassigned output stream.
  *
  * @author Alex Borisov
  */
@@ -71,7 +74,6 @@ public class SpeedometerShould {
         int speedInKph = 89;
 
         speedometer.setSpeedInKph(speedInKph);
-        readConsole();
 
         assertThat(readConsole()).isEmpty();
     }

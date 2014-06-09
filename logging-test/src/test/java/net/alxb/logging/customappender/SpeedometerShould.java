@@ -17,7 +17,9 @@ import static org.apache.log4j.Level.WARN;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
- * Test for {@code Speedometer} class
+ * Tests {@code Speedometer} class logging.
+ * <br>Logger is configured to write to custom appender.
+ * Log messages are read from {@code LoggingEvent}s sent to appender.
  *
  * @author Alex Borisov
  */

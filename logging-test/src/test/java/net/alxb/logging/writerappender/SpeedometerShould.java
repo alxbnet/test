@@ -15,7 +15,9 @@ import static net.alxb.logging.Speedometer.SPEED_LIMIT_KPH;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
- * Test for {@code Speedometer} class
+ * Tests {@code Speedometer} class logging.
+ * <br>Logger is configured to write to {@code StringWriter}.
+ * Log messages are read from {@code StringWriter}.
  *
  * @author Alex Borisov
  */
@@ -57,10 +59,8 @@ public class SpeedometerShould {
     }
 
     @After
-    public void removeOutputAppender() throws IOException {
+    public void removeOutputAppender() {
         Logger.getLogger(Speedometer.class).removeAppender(appender);
-
-        stringWriter.close();
     }
 
     private String readLog() {
